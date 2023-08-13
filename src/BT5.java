@@ -15,14 +15,14 @@ public class BT5 {
 		String ten = " ";
 		
 		int str1 = str.indexOf(" ");
-		int str2=0;
+		int str2 = 0;
 		
 		if(str1 == -1) {
 			System.out.print("\nNhap day du ho va ten dem!");
 			return;
 		}
 		
-		ho = str.substring(str2, str1);
+		ho = str.substring(str2,str1);
 		str2 = str1+1;
 		str1 = str.indexOf(" ",str2);
 		

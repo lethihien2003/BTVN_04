@@ -4,24 +4,26 @@ public class BT2 {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("CHUONG TRINH DAO NGUOC TRAT TU CAC KY TU TRONG TUNG TU CUA MOT XAU!");
-		System.out.println("Nhap vao mot xau: ");
+		System.out.println("\nCHUONG TRINH DAO NGUOC TRAT TU CAC KY TU TRONG TUNG TU CUA MOT XAU!");
+		System.out.print("\nNhap vao mot xau: ");
 		String str = sc.nextLine();
-		
-		//Su dung String
-		System.out.println("kq: "+string(str));
-		
+	
+		System.out.print("Xau da dao la: "+daoXau(str));
 	}
-	public static String string(String str) {
-		//loai bo khoang trang
-		String[] str1 = str.split("\\s+");
-		String str2 =" ";
-		
-		for(int i=0; i<str1.length; i++) {
-			String str3 = str1[i];
-			
-		}
-		return str ;
-		
-	}
+	
+	 public static String daoXau(String str) {        
+	        String[] str1 = str.split(" ");
+	        StringBuilder daoTu = new StringBuilder();
+	        
+	        for (String str2 : str1) {
+	            StringBuilder daoKiTu = new StringBuilder();
+	            for (int i = str2.length() - 1; i >= 0; i--) {
+	            	daoKiTu.append(str2.charAt(i));
+	            }
+	            
+	            daoTu.append(daoKiTu).append(" ");
+	        }
+	        
+	        return daoTu.toString().trim();
+	    }
 }

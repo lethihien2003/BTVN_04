@@ -25,9 +25,6 @@ public class BT1 {
 			}
 		}
 		return dem;
-		
-		
+			
 	}
-
-
 }
